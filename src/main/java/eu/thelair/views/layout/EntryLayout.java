@@ -17,12 +17,12 @@ public class EntryLayout extends HorizontalLayout {
         entryGrid.addColumn(Entry::getAmount).setHeader("Anzahl");
         entryGrid.addColumn(Entry::getDescription).setHeader("Beschreibung");
         entryGrid.addColumn(Entry::getPrice).setHeader("Preis");
-        entryGrid.addColumn(val -> val.getAmount() * val.getPrice().doubleValue()).setHeader("Gesamt");
+        entryGrid.addColumn(val -> val.getAmount() * val.getPrice()).setHeader("Gesamt");
         entryGrid.addComponentColumn(entry -> {
             return new Button("Löschen");
         }).setHeader("Löschen");
 
-        entryGrid.setItems(new Entry("Test", BigDecimal.valueOf(1.0), 1), new Entry("Test2", BigDecimal.valueOf(2.0), 2));
+        entryGrid.setItems(new Entry("Test", 1.0f, 1), new Entry("Test2", 2.0f, 2));
 
         setWidthFull();
         add(entryGrid);

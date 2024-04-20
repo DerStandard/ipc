@@ -1,17 +1,19 @@
 package eu.thelair.views.entity;
 
-import java.math.BigDecimal;
 
 public class Entry {
 
-    private Integer amount;
     private String description;
-    private BigDecimal price;
+    private Integer amount;
+    private float price;
+    private float total;
 
-    public Entry(String description, BigDecimal price, Integer amount) {
+    public Entry(String description, float price, Integer amount) {
         this.description = description;
         this.price = price;
         this.amount = amount;
+
+        this.total = amount * price;
     }
 
     public String getDescription() {
@@ -22,11 +24,11 @@ public class Entry {
         this.description = description;
     }
 
-    public BigDecimal getPrice() {
+    public float getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(float price) {
         this.price = price;
     }
 
@@ -37,4 +39,9 @@ public class Entry {
     public void setAmount(Integer amount) {
         this.amount = amount;
     }
+
+    public float getTotal() {
+        return total;
+    }
+
 }

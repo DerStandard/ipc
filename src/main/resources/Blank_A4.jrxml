@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.0.final using JasperReports Library version 6.21.0-4f56c4f36cd19e17675219a9ac4692d5f0f13b06  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="af92e511-2f56-489a-8eee-c4387b322dee">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="rechnungsnr" class="java.lang.String"/>
+	<parameter name="rechdat" class="java.lang.String"/>
+	<parameter name="faelligdat" class="java.lang.String"/>
+	<parameter name="lieferdat" class="java.lang.String"/>
+	<parameter name="kundnr" class="java.lang.String"/>
+	<parameter name="kunde" class="java.lang.String"/>
+	<parameter name="strassehr" class="java.lang.String"/>
+	<parameter name="plzort" class="java.lang.String"/>
+	<parameter name="summe" class="java.lang.Float"/>
+	<parameter name="ust" class="java.lang.Float"/>
+	<parameter name="rechnungsbetrag" class="java.lang.Float"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="description" class="java.lang.String"/>
+	<field name="amount" class="java.lang.Integer"/>
+	<field name="price" class="java.lang.Float"/>
+	<field name="total" class="java.lang.Float"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="249" splitType="Stretch">
+			<image>
+				<reportElement x="470" y="0" width="74" height="79" uuid="639809ee-4479-425a-b087-bf5c6cd2741c"/>
+				<imageExpression><![CDATA["C:/Users/icegu/Desktop/papalogo.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="360" y="80" width="100" height="21" uuid="94034982-533f-40d9-991e-8cd40fe8c424"/>
+				<text><![CDATA[Rechnungs- Nr.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="460" y="81" width="94" height="20" uuid="6bdb7258-2017-43a7-833c-a7ab0a6bf30a"/>
+				<textFieldExpression><![CDATA[$P{rechnungsnr}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="360" y="101" width="100" height="20" uuid="d6739bab-bde4-4342-8a89-997a7ffb0039"/>
+				<text><![CDATA[Rechnungsdatum]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="460" y="101" width="94" height="20" uuid="7cd81ced-a416-4163-b8bd-3c42f865c897"/>
+				<textFieldExpression><![CDATA[$P{rechdat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="121" width="94" height="20" uuid="8a7c43be-5b7e-4bfb-9140-35a5c95e7099"/>
+				<textFieldExpression><![CDATA[$P{faelligdat}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="360" y="121" width="100" height="20" uuid="9959047e-a11a-4ab1-aeb1-0dcf8fb0ab4b"/>
+				<text><![CDATA[Fällig am:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="141" width="100" height="20" uuid="d55d3270-773b-4b09-ac2f-ac8fbfdf01c4"/>
+				<text><![CDATA[Lieferdatum]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="460" y="141" width="94" height="20" uuid="467203e9-f105-4c5b-998b-41a77f2fe7e3"/>
+				<textFieldExpression><![CDATA[$P{lieferdat}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="360" y="161" width="100" height="20" uuid="65d29e0e-cf1e-47c0-a1b0-c8d3e75ec06e"/>
+				<text><![CDATA[Ihre Kundennummer]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="460" y="161" width="94" height="20" uuid="40ef46fb-3c20-4198-9b46-764e6c552103"/>
+				<textFieldExpression><![CDATA[$P{kundnr}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="360" y="181" width="100" height="20" uuid="16970999-e66f-4094-b3d0-c29e1d0b2e6d"/>
+				<text><![CDATA[Ihr Ansprechpartner]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="181" width="94" height="20" uuid="afecbb3d-8bdb-49d0-a679-e92038199fb9"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Alfred Schmidbauer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="80" width="350" height="21" uuid="87f531a0-e09e-4b8c-9610-dec17b47f644"/>
+				<text><![CDATA[A.S. Hausmeisterservice, Königstr. 5, 95158 Kirchenlamitz]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="110" width="190" height="20" uuid="2d516376-5813-4faf-bb29-254d0f514638"/>
+				<textFieldExpression><![CDATA[$P{kunde}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="130" width="190" height="20" uuid="f16b9b84-2126-4941-9240-f668ff1473ec"/>
+				<textFieldExpression><![CDATA[$P{strassehr}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="150" width="190" height="20" uuid="b24e4acf-4d3d-42d0-9a09-f8e10d41347e"/>
+				<textFieldExpression><![CDATA[$P{plzort}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="185" width="100" height="25" uuid="80192ea5-06b9-400f-82d7-954aeac0994c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{rechnungsnr}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="185" width="100" height="25" uuid="d1f82596-d1a8-4608-96bd-2166774999a4"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rechnung Nr.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="220" width="450" height="22" uuid="ed4929c7-02d2-41fc-bc1b-352011d2280f"/>
+				<text><![CDATA[
+                    Vielen Dank für Ihr Vertrauen. Ich stelle Ihnen hiermit folgende Leistungen in Rechnung:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="24" width="272" height="30" uuid="7c38a197-cbff-49e7-bb02-a4089038ab5d"/>
+				<textElement>
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[A.S. Hausmeisterservice]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="33" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="10" width="554" height="18" backcolor="#DEDEDE" uuid="06713b9e-2b0c-4d0b-b0bc-15a1210fa873"/>
+				<staticText>
+					<reportElement x="60" y="0" width="220" height="18" uuid="0908096b-c67a-409c-aa9e-b02d71de0ead"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Bezeichnung]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="280" y="0" width="70" height="18" uuid="ddad56d7-13f6-4803-b5fe-507d3e6cefb4"/>
+					<textElement textAlignment="Center">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Menge Min.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="350" y="0" width="105" height="18" uuid="08236879-2c20-4012-af9e-ea0513939348"/>
+					<textElement textAlignment="Center">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Einzelpreis €]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="455" y="0" width="99" height="18" uuid="90e442a1-de32-436e-b640-22a197e4c495"/>
+					<textElement textAlignment="Center">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Gesamtpreis]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="60" y="0" width="220" height="20" uuid="a9c9897a-03ae-424f-b976-ef0312eb67ad"/>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="70" height="20" uuid="ffeaffa3-a0c1-40f1-a9cf-4dfa92d8e111"/>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="0" width="105" height="20" uuid="de721178-0011-473c-91db-d9596cc72297"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="0" width="85" height="20" uuid="5e02a4c3-5b10-49e0-ae8a-b1b33d10524c"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="540" y="0" width="14" height="20" uuid="bf7c2e8e-a5ed-4df5-9f2f-2529490db2de"/>
+				<text><![CDATA[€]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="121" splitType="Stretch">
+			<line direction="BottomUp">
+				<reportElement x="0" y="0" width="554" height="1" uuid="8d1a7704-7b73-4eb2-b4f7-5635354677ce"/>
+			</line>
+			<staticText>
+				<reportElement x="30" y="0" width="140" height="14" uuid="e0ac0c16-1380-41d7-b9b9-164ad81b48e4"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Summe Positionen]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="455" y="1" width="85" height="14" uuid="15b018b0-7405-4acd-acc0-baaf66672dcb"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{summe}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="540" y="1" width="14" height="14" uuid="10eaff49-9e73-4a75-ac9a-fad72732a60e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[€]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="20" width="140" height="14" uuid="da3fbcf8-d933-4837-95b4-a54e108218e5"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Umsatzsteuer 19 %]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="455" y="20" width="85" height="14" uuid="0a1d6ccb-44dd-4b33-89a4-478143e8b227"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{ust}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="540" y="20" width="14" height="14" uuid="bb0e9c91-a85d-4fed-8ebc-7cc36dcd0899"/>
+				<text><![CDATA[€]]></text>
+			</staticText>
+			<frame>
+				<reportElement mode="Opaque" x="30" y="40" width="524" height="14" backcolor="#DEDCDC" uuid="e2a5e9b6-8fa9-4fc3-a080-1276c60d7023"/>
+				<staticText>
+					<reportElement x="0" y="0" width="140" height="14" uuid="aadd5fde-2dca-4b2c-ae4d-184d6d674cc4"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Rechnungsbtrag]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="390" y="0" width="120" height="14" uuid="7b088629-f5a2-4c88-834c-082e2923d318"/>
+					<textElement textAlignment="Right">
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{rechnungsbetrag}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="510" y="0" width="14" height="14" uuid="8f7a7718-5fd7-40ba-9bbb-7ba44c9689a4"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[€]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement mode="Opaque" x="10" y="61" width="430" height="20" forecolor="#E31310" uuid="a3b39473-8d2e-4764-8b58-b3db13a55217"/>
+				<text><![CDATA[
+                    1) Zahlungsbedingung: Zahlung innerhalb von 7 Tagen ab Rechnungseingang ohne Abzüge.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="81" width="114" height="20" uuid="a1c8a49f-16af-4203-afe1-2348b2e24138"/>
+				<text><![CDATA[Mit freundlichen Grüßen]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="101" width="114" height="20" uuid="a436732b-de39-4683-90a4-239ab3424bed"/>
+				<text><![CDATA[Alfred Schmidbauer]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="88" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="10" y="18" width="160" height="20" forecolor="#9E9D9D" uuid="8ee4923f-630d-47e6-9088-29ea14eb9f7c"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[A.S. Hausmeisterservice]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="10" y="28" width="160" height="20" forecolor="#9E9D9D" uuid="ee707ebe-5287-4f3e-a52b-06445f5fb5d7"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Königstrasse 5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="10" y="38" width="160" height="20" forecolor="#9E9D9D" uuid="ceeb6090-007d-4810-bccb-e64f71dbd40f"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[95158 Kirchenlamitz ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="10" y="48" width="160" height="20" forecolor="#9E9D9D" uuid="783b0dc4-c247-4a9f-9145-636df6a7e1dc"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Deutschland]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="10" y="58" width="160" height="20" forecolor="#9E9D9D" uuid="928d28b4-0adb-4c90-9f05-508fed71a5ae"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Tel.: 09285/9685522]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="10" y="68" width="160" height="20" forecolor="#9E9D9D" uuid="b78f84a4-fe2c-4233-88aa-731496d61791"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[E-Mail: alfredschmidbauer@freenet.de]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="190" y="18" width="160" height="20" forecolor="#9E9D9D" uuid="8dea419b-e63b-40cc-85ba-2bbc3e0c8770"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Sparkasse Hochfranken]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="190" y="28" width="160" height="20" forecolor="#9E9D9D" uuid="b4b5f468-2d9f-4414-8ca4-f475d29da863"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[IBAN: DE 18 7805 0000 0222 5645 36]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="190" y="38" width="160" height="20" forecolor="#9E9D9D" uuid="a111d051-4cf7-4da2-aa63-2caf8acbd8fe"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[BIC: BYLADEM1HOF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="390" y="18" width="160" height="20" forecolor="#9E9D9D" uuid="84b10a3b-2b47-4596-b62b-41fb16bc61f3"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[St.Nr.: 25829600116]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="390" y="28" width="160" height="20" forecolor="#9E9D9D" uuid="3b15efd0-24b0-4840-ab15-70043cbe2dde"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Inhaber: Alfred Schmidbauer]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
