@@ -16,8 +16,6 @@ import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 
 import java.io.File;
 import java.io.IOException;
-import java.math.BigDecimal;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -38,15 +36,29 @@ public class IPCView extends VerticalLayout {
         formLayout.setWidth("100%");
         formLayout.add(addressLayout, invoiceLayout);
 
-
         createPDFButton.addClickListener(event -> {
             try {
-                Entry entry1 = new Entry("Test", 1.0f,1);
-                Entry entry2 = new Entry("Test2", 2.0f,2);
-                Entry entry3 = new Entry("Test3", 3.0f,3);
+                Entry entry1 = new Entry("Test", 1.0f, 1);
+                Entry entry2 = new Entry("Test2", 2.0f, 2);
+                Entry entry3 = new Entry("Test3", 3.0f, 3);
                 ArrayList<Entry> entries = new ArrayList<>(Arrays.asList(entry1, entry2, entry3));
 
-                Invoice invoice = new Invoice("Max", "Mustermann", "Musterstraße 1", "12345", "Musterstadt", "R123", "A123", "01.01.2021", 100.0f, 100.0f, "01.02.2021", entries, "01.01.2021", "123", 100.0f);
+                Invoice invoice = new Invoice("Max",
+                                              "Mustermann",
+                                              "Musterstraße 1",
+                                              "12345",
+                                              "Musterstadt",
+                                              "R123",
+                                              "A123",
+                                              "01.01.2021",
+                                              100.0f,
+                                              100.0f,
+                                              "01.02.2021",
+                                              entries,
+                                              "01.01.2021",
+                                              "123",
+                                              100.0f
+                );
                 createPDF(invoice);
             } catch (JRException | IOException e) {
                 e.printStackTrace();
@@ -65,10 +77,9 @@ public class IPCView extends VerticalLayout {
         parameters.put("faelligdat", invoice.getInvoicePayUntil());
         parameters.put("lieferdat", invoice.getInvoiceDeliveryDate());
         parameters.put("kundnr", invoice.getCustomerNumber());
-        if(invoice.getCompany() == null){
+        if (invoice.getCompany() == null) {
             parameters.put("kunde", invoice.getFirstName() + " " + invoice.getLastName());
-        }
-        else {
+        } else {
             parameters.put("kunde", invoice.getCompany());
         }
         parameters.put("strassehr", invoice.getStreet());

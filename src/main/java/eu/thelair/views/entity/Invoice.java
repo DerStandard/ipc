@@ -1,6 +1,5 @@
 package eu.thelair.views.entity;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Invoice {
@@ -19,10 +18,24 @@ public class Invoice {
     private String invoiceDeliveryDate;
     private String customerNumber;
     private float inovoiceEntrySum;
-    private List<Entry> entries = new ArrayList<>();
+    private List<Entry> entries;
 
     // Konstruktor mit last and first name
-    public Invoice(String firstName, String lastName, String street, String zip, String city, String invoiceNumber, String invoiceOrderNumber, String invoiceDate, float invoiceTotal, float invoiceTax, String invoicePayUntil, List<Entry> entries, String invoiceDeliveryDate, String customerNumber, float invoiceEntrySum) {
+    public Invoice(String firstName,
+                   String lastName,
+                   String street,
+                   String zip,
+                   String city,
+                   String invoiceNumber,
+                   String invoiceOrderNumber,
+                   String invoiceDate,
+                   float invoiceTotal,
+                   float invoiceTax,
+                   String invoicePayUntil,
+                   List<Entry> entries,
+                   String invoiceDeliveryDate,
+                   String customerNumber,
+                   float invoiceEntrySum) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.street = street;
@@ -39,8 +52,22 @@ public class Invoice {
         this.customerNumber = customerNumber;
         this.inovoiceEntrySum = invoiceEntrySum;
     }
-// Konstruktor mit Company
-    public Invoice(String company, String street, String zip, String city, String invoiceNumber, String invoiceOrderNumber, String invoiceDate, float invoiceTotal, float invoiceTax, String invoicePayUntil, List<Entry> entries, String invoiceDeliveryDate, String customerNumber, float invoiceEntrySum) {
+
+    // Konstruktor mit Company
+    public Invoice(String company,
+                   String street,
+                   String zip,
+                   String city,
+                   String invoiceNumber,
+                   String invoiceOrderNumber,
+                   String invoiceDate,
+                   float invoiceTotal,
+                   float invoiceTax,
+                   String invoicePayUntil,
+                   List<Entry> entries,
+                   String invoiceDeliveryDate,
+                   String customerNumber,
+                   float invoiceEntrySum) {
         this.company = company;
         this.street = street;
         this.zip = zip;

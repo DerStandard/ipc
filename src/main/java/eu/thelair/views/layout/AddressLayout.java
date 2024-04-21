@@ -1,9 +1,11 @@
 package eu.thelair.views.layout;
 
 import com.vaadin.flow.component.combobox.ComboBox;
+import com.vaadin.flow.component.combobox.ComboBoxVariant;
 import com.vaadin.flow.component.formlayout.FormLayout;
 import com.vaadin.flow.component.textfield.NumberField;
 import com.vaadin.flow.component.textfield.TextField;
+import com.vaadin.flow.component.textfield.TextFieldVariant;
 
 public class AddressLayout extends FormLayout {
 
@@ -32,12 +34,20 @@ public class AddressLayout extends FormLayout {
         lastNameField.setVisible(false);
         companyField.setVisible(false);
 
+        firstNameField.addThemeVariants(TextFieldVariant.LUMO_SMALL);
+        lastNameField.addThemeVariants(TextFieldVariant.LUMO_SMALL);
+        companyField.addThemeVariants(TextFieldVariant.LUMO_SMALL);
+        streetField.addThemeVariants(TextFieldVariant.LUMO_SMALL);
+        zipField.addThemeVariants(TextFieldVariant.LUMO_SMALL);
+        cityField.addThemeVariants(TextFieldVariant.LUMO_SMALL);
+
         setColspan(companyField, 2);
         setColspan(streetField, 2);
     }
 
     private void setupComboBox() {
         setColspan(salutationBox, 2);
+        salutationBox.addThemeVariants(ComboBoxVariant.LUMO_SMALL);
         salutationBox.setItems("Herr", "Frau", "Firma");
 
         salutationBox.addValueChangeListener(event -> {
